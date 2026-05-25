@@ -1,0 +1,50 @@
+# basic setting
+bs_train : 8
+bs_test : 8
+workers : 4
+step_per_update: 2
+max_epoch : 300
+
+# model setting
+pretrained_i3d_weight : './models/model_rgb.pth'
+RT_depth : 5
+score_range : 10
+voter_number : 10
+cls : 'Suturing'
+# 'Knot_Tying''Needle_Passing''Suturing'
+
+# dataset setting
+features_dir : '/path/to/Kangduo/features/'
+info_dir : '/path/to/Kangduo/annotations/'
+label_max : 8
+label_min : 2
+judge_max : 5
+judge_min : 1
+num_frames : 160
+seed : 0
+temporal_shift_min : -3
+temporal_shift_max : 3
+num_duration_groups : 6
+fold : 1
+
+
+data_augmentation:
+  enabled: true
+  crop_scale_min: 0.8
+  crop_scale_max: 1.0
+  flip_prob: 0.5
+  color_jitter:
+    brightness: 0.2
+    contrast: 0.2
+    saturation: 0.2
+  rotation_degrees: 5
+
+# optimizer setting
+optimizer: 'Adam'
+weight_decay : 0.0001
+base_lr : 0.0001
+lr_factor : 0.1
+dae_weight : 0.5
+
+# others
+print_freq : 40

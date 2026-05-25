@@ -1,0 +1,46 @@
+RT_depth: 5
+Seven_cls: 1
+base_lr: 0.0001
+benchmark: Hei
+bs_test: 1
+bs_train: 1
+ckpts: null
+cls: Dissection
+#  'Calot', 'Dissection', 'Across'
+data_augmentation:
+  color_jitter:
+    brightness: 0.2
+    contrast: 0.2
+    saturation: 0.2
+  crop_scale_max: 1.0
+  crop_scale_min: 0.8
+  enabled: true
+  flip_prob: 0.5
+  rotation_degrees: 10
+exp_name: try
+experiment_path: ./experiments/CoRe_RT/Hei/try
+fix_bn: true
+frames_dir: /path/to/HeiChole/frames
+info_dir: /path/to/HeiChole/annotations
+judge_max: 5
+judge_min: 1
+label_max: 30
+label_min: 6
+lr_factor: 0.1
+max_epoch: 1400
+num_duration_groups: 16
+num_frames: 70
+optimizer: Adam
+pretrained_i3d_weight: ./models/model_rgb.pth
+print_freq: 5
+resume: false
+score_range: 30
+seed: 1024
+split_index: 4
+step_per_update: 2
+temporal_shift_max: 3
+temporal_shift_min: -3
+test: false
+voter_number: 5
+weight_decay: 0.01
+workers: 4
