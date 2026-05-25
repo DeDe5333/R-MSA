@@ -89,7 +89,7 @@ bash ./scripts/run_loso.sh 0 JIG try
 
 **Arguments:**
 - First argument (`0`): GPU ID
-- Second argument (`JIG`): Dataset name (options: `JIG`, `Hei`)
+- Second argument (`JIG`): Dataset name (options: `JIG`, `Hei`, `Kang`)
 - Third argument (`try`): Experiment name
 
 
